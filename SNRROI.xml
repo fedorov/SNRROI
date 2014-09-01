@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Quantification</category>
+  <title>SNR ROI estimation</title>
+  <description><![CDATA[Estimation of SNR over image volume as ratio of the mean signal to the signal standard deviation is a fixed size neighborhood.]]></description>
+  <version>0.0.1</version>
+  <documentation-url></documentation-url>
+  <license>Slicer</license>
+  <contributor>Andriy Fedorov (SPL/BWH)</contributor>
+  <acknowledgements>This work was partially funded by NIH grant R01 CA160902.</acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+
+    <image>
+      <name>inputImageName</name>
+      <label>Input image</label>
+      <channel>input</channel>
+      <description>Input image</description>
+      <index>0</index>
+    </image>
+
+    <image>
+      <name>outputImageName</name>
+      <label>Output image</label>
+      <channel>output</channel>
+      <description>Input image</description>
+      <index>1</index>
+    </image>
+
+    <integer-vector>
+      <name>neiSize</name>
+      <label>Neighborhood size</label>
+      <longflag>neiSize</longflag>
+      <default>2,2,0</default>
+      <description>List of integers defining the ROI to be used for estimation of mean and SD of a ROI signal.</description>
+    </integer-vector>
+
+   </parameters>
+</executable>
